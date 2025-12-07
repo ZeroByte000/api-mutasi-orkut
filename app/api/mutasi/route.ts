@@ -4,7 +4,7 @@ import { makeOrderkuotaRequest } from "../../../lib/orderkuota";
 
 interface MutasiRequestBody {
   username: string;
-  token: string; // Format: "accountId:actualToken"
+  token: string;
 }
 
 export async function POST(request: NextRequest): Promise<NextResponse> {
@@ -19,11 +19,8 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
       );
     }
 
-    // Pisahkan accountId dan token asli dari string auth_token
-    // Contoh: "2057644:MN1BHYLER5xfjvcCS024eAgInDh8PmUp"
     const tokenParts = token.split(":");
 
-    // Validasi format token
     if (tokenParts.length !== 2) {
       return NextResponse.json(
         {
@@ -34,7 +31,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
       );
     }
 
-    const [accountId, _] = tokenParts; // Kita hanya butuh accountId untuk URL
+    const [accountId, _] = tokenParts;
 
     const requestParams = {
       app_reg_id:
@@ -47,7 +44,6 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
       app_version_code: "251029",
       auth_username: username,
       "requests[qris_history][page]": "1",
-      // PERUBAHAN DI SINI: Gunakan auth_token yang LENGKAP, bukan yang sudah dipisah
       auth_token: token,
       app_version_name: "25.10.29",
       ui_mode: "light",
@@ -56,7 +52,6 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
       "requests[qris_history][ke_tanggal]": "",
     };
 
-    // Gunakan accountId yang sudah diekstrak untuk URL
     const response = await makeOrderkuotaRequest(
       `/api/v2/qris/mutasi/${accountId}`,
       requestParams
