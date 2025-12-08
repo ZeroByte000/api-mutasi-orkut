@@ -6,8 +6,7 @@
 │   │   │   └── route.js       // Endpoint untuk login
 │   │   ├── mutasi
 │   │   │   └── route.js       // Endpoint untuk cek mutasi
-│   └── layout.js              // (Root layout, sudah ada secara default)
+│   └── layout.js
 ├── /lib
-│   └── orderkuota.js          // Logika bersama (tidak berubah)
-└── ... (file lainnya)
+│   └── orderkuota.js
 ```
