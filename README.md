@@ -6,7 +6,7 @@ Url Api: https://api-mutasi-orkut.vercel.app
 
 Notes: Data aman gak  nyimmpen password ataupun token di server api, yang mau mau aja
 
-LOGIN REQUEST 
+### LOGIN REQUEST 
 ```
 curl --location 'https://api-mutasi-orkut.vercel.app/api/login' \
 --header 'Content-Type: application/json' \
@@ -29,7 +29,7 @@ RESPONSE
 ```
 
 
-VERIF OTP EMAIL
+### VERIF OTP EMAIL
 ```
 curl --location 'https://api-mutasi-orkut.vercel.app/api/login' \
 --header 'Content-Type: application/json' \
@@ -57,7 +57,7 @@ RESPONSE
 
 
 
-CEK MUTASI REQUEST
+### CEK MUTASI REQUEST
 ```
 curl --location 'https://api-mutasi-orkut.vercel.app/api/mutasi' \
 --header 'Content-Type: application/json' \
