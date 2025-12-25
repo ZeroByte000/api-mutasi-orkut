@@ -80,17 +80,31 @@ RESPONSE
         "pages": 0,
         "results": [
             {
-                "id": 189700679,
+                "id": 189700000,
                 "debet": "0",
                 "kredit": "123",
-                "saldo_akhir": "200",
+                "saldo_akhir": "139",
                 "keterangan": "NOBU / EW****************",
-                "tanggal": "25/12/2025 10:10",
+                "tanggal": "25/12/2025 11:39",
                 "status": "IN",
                 "fee": "",
                 "brand": {
                     "name": "DANA",
                     "logo": "https://app.orderkuota.com/assets/qris/dana.png"
+                }
+            },
+            {
+                "id": 189260000,
+                "debet": 50.000",
+                "kredit": "50.000",
+                "saldo_akhir": "16",
+                "keterangan": "Pencairan Saldo QRIS 37.000 R#25000",
+                "tanggal": "23/12/2025 10:58",
+                "status": "OUT",
+                "fee": "",
+                "brand": {
+                    "name": "Orderkuota",
+                    "logo": "https://app.orderkuota.com/assets/qris/orderkuota.png"
                 }
             }
          ]
