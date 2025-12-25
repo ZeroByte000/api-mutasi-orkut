@@ -93,7 +93,7 @@ RESPONSE
                     "logo": "https://app.orderkuota.com/assets/qris/dana.png"
                 }
             }
-]
+         ]
     },
     "account": {
         "success": true,
