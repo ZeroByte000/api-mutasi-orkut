@@ -78,7 +78,22 @@ RESPONSE
         "total": 0,
         "page": 1,
         "pages": 0,
-        "results": []
+        "results": [
+            {
+                "id": 189700679,
+                "debet": "0",
+                "kredit": "123",
+                "saldo_akhir": "139",
+                "keterangan": "NOBU / RA****************",
+                "tanggal": "25/12/2025 07:39",
+                "status": "IN",
+                "fee": "",
+                "brand": {
+                    "name": "DANA",
+                    "logo": "https://app.orderkuota.com/assets/qris/dana.png"
+                }
+            }
+]
     },
     "account": {
         "success": true,
